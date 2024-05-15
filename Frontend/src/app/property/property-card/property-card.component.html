@@ -1,15 +1,17 @@
 <!-- <h1>Hello Property</h1> -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="shadow-lg card">
-                <div class="card-body p-2">
-                    <img class="propmImg" src="assets/images/house.jpeg">
-                    <h1>{{Property.Type}}</h1>
-                    <h2>{{Property.Name}}</h2>
-                    <h3>{{Property.Price}}</h3>
-                </div>
-            </div>
+
+<div class="shadow-lg card">
+    <div class="card-body p-2">
+        <div class="card-img-wrapper">
+            <img class="card-img-top" src="assets/images/house.jpeg">
+            <ul class="list-inline text-center member-icons animate">
+                <li class="list-inline-item"><button class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button></li>
+                <li class="list-inline-item"><button class="btn btn-primary"><i class="fa-solid fa-address-book"></i></button></li>
+            </ul>
         </div>
+        
+        <h1>{{property.Type}}</h1>
+        <h2>{{property.Name}}</h2>
+        <h3>{{property.Price}}</h3>
     </div>
 </div>

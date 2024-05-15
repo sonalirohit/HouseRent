@@ -1,0 +1,34 @@
+[{
+    "Id": 1,
+    "Name":"Birla House",
+    "Type":"House",
+    "Price":12000
+},
+{   
+    "Id": 2,
+    "Name":"Erose Villa",
+    "Type":"Villa",
+    "Price":52000
+},
+{   
+    "Id": 3,
+    "Name":"Goenka Villa",
+    "Type":"Villa",
+    "Price":42000
+},
+{   "Id": 4,
+    "Name":"Singhania House",
+    "Type":"House",
+    "Price":16000
+},
+{   "Id": 5,
+    "Name":"Mark Hill",
+    "Type":"Flat",
+    "Price":12000
+},
+{   "Id": 6,
+    "Name":"Swastik Complex",
+    "Type":"Flat",
+    "Price":25000
+}
+]
