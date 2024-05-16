@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HousingService } from '../../../services/housing.service';
 import { IProperty } from '../IProperty.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-property-list',
@@ -10,11 +11,16 @@ import { IProperty } from '../IProperty.interface';
 })
 export class PropertyListComponent implements OnInit {
     Properties: Array<IProperty> = [];
+    SellRent = 1;
 
-    constructor( private housingservice : HousingService){} //dependency injection
+    constructor(private route:ActivatedRoute, private housingservice : HousingService){} //dependency injection
 
     ngOnInit(): void {
-        this.housingservice.getAllProperties().subscribe(
+
+        if(this.route.snapshot.url.toString()){
+            this.SellRent = 2 // means we are on rent-property
+        }
+        this.housingservice.getAllProperties(this.SellRent).subscribe(
             data => {this.Properties = data}, error => console.log(error)
         )
     }
